@@ -1,0 +1,9 @@
+- insert:
+    - id: model-aware-auto
+      name: dsh-autoshift
+      config:
+        mode: balanced
+        scope: {}
+        fallback:
+          maxAttempts: 0
+        routes: []

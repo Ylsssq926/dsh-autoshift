@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Model Autoshift",
+    "description": "Pick Auto: task-aware routing across the models you already configured. One route per session, zero extra model calls."
+  }
+}

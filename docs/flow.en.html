@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #eef0f6; }
+  body {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    color: #1e2430;
+    padding: 36px;
+    width: 1252px;
+  }
+  .panel {
+    width: 1180px;
+    background: #fff;
+    border-radius: 24px;
+    padding: 40px 44px 34px;
+    box-shadow: 0 18px 50px rgba(38, 44, 70, .12);
+  }
+  .head { display: flex; align-items: center; gap: 18px; }
+  .logo { width: 58px; height: 58px; flex: none; }
+  .title { font-size: 30px; font-weight: 700; letter-spacing: .3px; }
+  .subtitle { font-size: 14px; color: #6b7280; margin-top: 4px; }
+  .tagline {
+    margin-left: auto; flex: none;
+    background: linear-gradient(135deg, #6d5ce7, #2db7a3);
+    color: #fff; font-size: 15px; font-weight: 600;
+    padding: 11px 20px; border-radius: 999px;
+  }
+  .rule { height: 1px; background: #eceef3; margin: 26px 0 30px; }
+  .flow {
+    display: grid;
+    grid-template-columns: 1fr 26px 1fr 26px 1fr 26px 1fr 26px 1fr;
+    align-items: stretch;
+  }
+  .card {
+    position: relative;
+    border: 1px solid #e6e8ee;
+    border-radius: 16px;
+    padding: 20px 16px 18px;
+    background: #fff;
+    overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .card::before {
+    content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, #6d5ce7, #2db7a3);
+  }
+  .badge {
+    width: 30px; height: 30px; border-radius: 50%;
+    background: linear-gradient(135deg, #6d5ce7, #2db7a3);
+    color: #fff; font-size: 15px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 13px;
+  }
+  .card h3 { font-size: 18px; font-weight: 700; }
+  .card p { font-size: 12.5px; color: #6b7280; margin-top: 5px; line-height: 1.5; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 13px; }
+  .chip {
+    font-size: 11.5px; font-weight: 600; padding: 4px 9px; border-radius: 7px;
+    background: #f1f2f7; color: #4b5563; white-space: nowrap;
+  }
+  .chip.eco { background: #e6f6ef; color: #1f9d6b; }
+  .chip.std { background: #eceefb; color: #5b54d6; }
+  .chip.qua { background: #f3ecfb; color: #8b46c9; }
+  .chip.solid { background: linear-gradient(135deg, #6d5ce7, #2db7a3); color: #fff; }
+  .arrow { display: flex; align-items: center; justify-content: center; }
+  .arrow svg { width: 22px; height: 22px; }
+  .foot {
+    margin-top: 28px; background: #f6f7fb; border-radius: 12px;
+    padding: 14px 20px; text-align: center;
+    font-size: 13px; color: #5b6472;
+  }
+  .foot b { color: #1e2430; }
+</style>
+</head>
+<body>
+  <div class="panel">
+    <div class="head">
+      <svg class="logo" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="g" x1="8" y1="56" x2="56" y2="8" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#6d5ce7"/><stop offset="1" stop-color="#2db7a3"/>
+        </linearGradient></defs>
+        <path d="M32 5 57 49a7 7 0 0 1-6 10H13a7 7 0 0 1-6-10L26 5a7 7 0 0 1 12 0Z" fill="url(#g)"/>
+        <path d="m21 45 11-25 11 25h-6l-2.2-5H28l-2 5h-5Zm9-10h3.5L32 30.5 30 35Z" fill="#fff"/>
+      </svg>
+      <div>
+        <div class="title">Model Autoshift · How it works</div>
+        <div class="subtitle">You bring the task — Auto picks the best model from the ones you already configured</div>
+      </div>
+      <div class="tagline">Still in manual? Shift to Auto</div>
+    </div>
+    <div class="rule"></div>
+    <div class="flow">
+      <div class="card">
+        <div class="badge">1</div>
+        <h3>Assign</h3>
+        <p>New session, pick Auto, drop in your task.</p>
+        <div class="chips"><span class="chip solid">Pick Auto</span><span class="chip">Zero config</span></div>
+      </div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h13m0 0-5-5m5 5-5 5" stroke="#c3c8d4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="card">
+        <div class="badge">2</div>
+        <h3>Read</h3>
+        <p>Reads your latest task and sorts it into one of six types.</p>
+        <div class="chips">
+          <span class="chip">Engineering</span><span class="chip">Creative</span><span class="chip">Writing</span>
+          <span class="chip">Research</span><span class="chip">Architecture</span><span class="chip">Everyday</span>
+        </div>
+      </div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h13m0 0-5-5m5 5-5 5" stroke="#c3c8d4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="card">
+        <div class="badge">3</div>
+        <h3>Shift</h3>
+        <p>Dispatches across three tiers — cheap for chores, flagship for the hard stuff.</p>
+        <div class="chips"><span class="chip eco">Economy</span><span class="chip std">Standard</span><span class="chip qua">Flagship</span></div>
+      </div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h13m0 0-5-5m5 5-5 5" stroke="#c3c8d4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="card">
+        <div class="badge">4</div>
+        <h3>Pin</h3>
+        <p>The first route binds the whole session — no drift on restart.</p>
+        <div class="chips"><span class="chip">One session, one route</span><span class="chip">Zero extra calls</span></div>
+      </div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h13m0 0-5-5m5 5-5 5" stroke="#c3c8d4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="card">
+        <div class="badge">5</div>
+        <h3>Receipt</h3>
+        <p>One line at the end of each turn — see who ran at a glance.</p>
+        <div class="chips"><span class="chip solid">Auto · model · tier · role</span></div>
+      </div>
+    </div>
+    <div class="foot">Forwards to <b>one</b> model per request · no voting · no warming · no default retries · usage passes through untouched</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "dsh-autoshift",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Model Autoshift for DeepSeek Harness: one Auto gear for your whole model pool — task-aware routing, session-stable, zero extra model calls.",
+  "keywords": ["deepseek-harness", "dsh", "dsh-plugin", "auto", "model-routing", "model-router", "cost-optimization"],
+  "scripts": { "test": "node --test" },
+  "engines": { "dsh": ">=0.2.2-rc.1 <0.3.0-0" },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./core/*.mjs": "./core/*.mjs",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": ["index.js", "client.js", "core/*.mjs", "*.test.mjs", "test-fixtures.mjs", "cordis.patch.yml", "README.md", "README.en.md", "locale/*.json", "icon.svg", "docs/*.png"],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-conversation"]
+    }
+  }
+}

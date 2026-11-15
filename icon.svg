@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Model Autoshift">
+  <defs>
+    <linearGradient id="auto" x1="8" y1="56" x2="56" y2="8" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6d5ce7"/>
+      <stop offset="1" stop-color="#2db7a3"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 5 57 49a7 7 0 0 1-6 10H13a7 7 0 0 1-6-10L26 5a7 7 0 0 1 12 0Z" fill="url(#auto)"/>
+  <path d="m21 45 11-25 11 25h-6l-2.2-5H28l-2 5h-5Zm9-10h3.5L32 30.5 30 35Z" fill="#fff"/>
+</svg>

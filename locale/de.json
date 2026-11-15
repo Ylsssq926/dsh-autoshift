@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Model Autoshift",
+    "description": "Wähle Auto: aufgabenbasiertes Routing über deine bereits konfigurierten Modelle. Eine Route pro Sitzung, keine zusätzlichen Modellaufrufe."
+  }
+}

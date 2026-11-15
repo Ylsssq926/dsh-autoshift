@@ -1,3 +1,12 @@
+![Model Autoshift](docs/banner.png)
+
+[![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+[![CI](https://github.com/Ylsssq926/dsh-autoshift/actions/workflows/ci.yml/badge.svg)](https://github.com/Ylsssq926/dsh-autoshift/actions/workflows/ci.yml)
+[![Node ≥ 22](https://img.shields.io/badge/node-%3E%3D22-339933.svg?logo=node.js&logoColor=white)](package.json)
+[![DSH 0.2.2-rc.1](https://img.shields.io/badge/DSH-0.2.2--rc.1-6d5ce7.svg)](https://github.com/Ylsssq926/dsh-autoshift)
+[![i18n: 8 languages](https://img.shields.io/badge/i18n-8%20languages-2db7a3.svg)](README.md)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-6d5ce7.svg)](CONTRIBUTING.md)
+
 # Model Autoshift (模型自动挡)
 
 > Still picking models in manual? Shift to Auto.
@@ -6,7 +15,7 @@ Collected a pile of relay models and still hand-picking one for every task? Mode
 
 You bring the task. Auto picks the model.
 
-[中文](README.md)
+[中文](README.md) · **English** · [日本語](README.ja.md) · [한국어](README.ko.md) · [Français](README.fr.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Русский](README.ru.md)
 
 ![Model Autoshift at a glance](docs/flow.en.png)
 
@@ -128,6 +137,10 @@ A full `routes` list overrides auto-discovery for fixed team flows or long-term 
 ## Compatibility
 
 DSH `0.2.2-rc.1` · Node.js 22+.
+
+## Architecture
+
+![Architecture](docs/architecture.png)
 
 ## Development
 

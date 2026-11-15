@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Model Autoshift",
+    "description": "Elige Auto: enrutamiento según la tarea entre los modelos que ya configuraste. Una ruta por sesión, cero llamadas adicionales al modelo."
+  }
+}

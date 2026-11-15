@@ -46,3 +46,15 @@ test('labels are bilingual, omit missing tiers and mark fallbacks', () => {
   assert.equal(receiptLabel({ ...receipt, tier: null }, 'zh'), 'Auto · gpt-5.4-mini · 工程');
   assert.equal(receiptLabel({ ...receipt, role: 'unknown-role' }, 'zh'), 'Auto · gpt-5.4-mini · 经济档 · unknown-role');
 });
+
+test('labels cover eight languages and fall back to English for unknown locales', () => {
+  const receipt = { provider: 'relay', model: 'm', role: 'implementer', mode: 'economy', tier: 'economy', fallbackAttempt: 0 };
+  assert.equal(receiptLabel(receipt, 'ja'), 'Auto · m · エコノミー · 実装');
+  assert.equal(receiptLabel(receipt, 'ko'), 'Auto · m · 이코노미 · 구현');
+  assert.equal(receiptLabel(receipt, 'fr'), 'Auto · m · éco · implémentation');
+  assert.equal(receiptLabel(receipt, 'es'), 'Auto · m · económico · implementación');
+  assert.equal(receiptLabel(receipt, 'de'), 'Auto · m · Economy · Implementierung');
+  assert.equal(receiptLabel(receipt, 'ru'), 'Auto · m · эконом · реализация');
+  assert.equal(receiptLabel(receipt, 'xx-YY'), 'Auto · m · economy · implementer');
+  assert.equal(receiptLabel({ ...receipt, fallbackAttempt: 2 }, 'ja'), 'Auto · m · エコノミー · 実装 · 代替×2');
+});

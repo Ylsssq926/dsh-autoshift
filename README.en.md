@@ -147,3 +147,7 @@ DSH `0.2.2-rc.1` · Node.js 22+.
 ```bash
 node --test
 ```
+
+## License
+
+Apache-2.0 © 2026 掠蓝 (Ylsssq926). Reuse and derivatives must retain the [LICENSE](LICENSE) and [NOTICE](NOTICE) attribution and state significant changes.

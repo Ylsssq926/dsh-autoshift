@@ -147,3 +147,7 @@ DSH `0.2.2-rc.1` · Node.js 22+。
 ```bash
 node --test
 ```
+
+## 许可证
+
+Apache-2.0 © 2026 掠蓝（Ylsssq926）。转载或衍生请保留 [LICENSE](LICENSE) 与 [NOTICE](NOTICE) 署名，并注明所做修改。
